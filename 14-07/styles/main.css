@@ -1,0 +1,35 @@
+:root {
+  --tipodeletra: Arial;
+}
+
+.box-1 {
+  font-family: var(--tipodeletra);
+  background-color: beige;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  margin: 10px;
+  border: solid 20px red;
+}
+.box-2 {
+  background-color: beige;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  margin: 10px;
+  border: solid 20px red;
+}
+.linea {
+  background-color: brown;
+  width: 250px;
+}
+.main {
+  border: solid 20px black;
+  width: 250 px;
+  height: 100 px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.box:hover {
+  background-color: brown;
+}
