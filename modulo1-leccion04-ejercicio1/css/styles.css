@@ -1,0 +1,25 @@
+.page {
+  margin: 20px;
+}
+
+/* flex */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: solid 5px black;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  border: solid 3px red;
+  width: 100px;
+  padding: 2px;
+  margin: 2px;
+}
+.order {
+  order: -1;
+}

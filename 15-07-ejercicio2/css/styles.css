@@ -1,0 +1,18 @@
+body {
+  margin: 20px;
+}
+.mama {
+  width: 100%;
+  padding: 50px;
+  border: solid 10px rebeccapurple;
+}
+
+.box {
+  border: solid 15px black;
+  width: 50%;
+}
+.title {
+  font-size: 45px;
+  width: 50%;
+  max-width: 100%;
+}

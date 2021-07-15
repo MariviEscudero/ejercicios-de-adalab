@@ -1,0 +1,15 @@
+
+
+
+
+/* flex */
+
+.contenedor {
+ height: auto;
+ width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+
