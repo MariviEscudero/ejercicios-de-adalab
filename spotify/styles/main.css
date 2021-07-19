@@ -1,3 +1,23 @@
-.listado {
-  background-color: aqua;
+body {
+  margin: 0%;
+}
+
+.header {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+}
+.link-list {
+  display: flex;
+  flex-direction: row;
+}
+.spotify-round-logo {
+  height: 2.5rem;
+}
+.hamburger-menu {
+  height: 2.5rem;
+}
+
+.prueba-premium {
+  background-color: dodgerblue;
 }

@@ -1,0 +1,53 @@
+body {
+  background-color: silver;
+}
+
+/*mobile*/
+
+.todo {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.links {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+}
+.amarillo {
+  background-color: yellow;
+}
+footer {
+  background-color: grey;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*tablet*/
+@media all and (max-width: 1000px) and (min-width: 480px) {
+  .todo {
+    display: flex;
+  }
+  .links {
+    position: absolute;
+    padding-right: 150px;
+  }
+  .amarillo {
+    position: relative;
+    margin-left: 200px;
+    display: flex;
+  }
+  .naranja {
+    background-color: orange;
+    height: 220px;
+    width: 450px;
+  }
+  footer {
+    position: relative;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/*desktop*/
