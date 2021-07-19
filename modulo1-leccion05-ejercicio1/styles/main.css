@@ -1,0 +1,26 @@
+/*crea una lista de cinco elementos que se muestre en línea y con espacios en cada elemento de 12 pixeles*/
+.container {
+  background: tomato;
+  box-sizing: border-box;
+}
+.lista {
+  background-color: white;
+  display: inline-block;
+  box-sizing: content-box;
+  font-size: 90%;
+}
+
+/*flexbox*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 250px;
+  height: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.lista {
+  width: 50px;
+}
