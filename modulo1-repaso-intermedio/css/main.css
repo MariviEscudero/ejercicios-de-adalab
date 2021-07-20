@@ -1,15 +1,16 @@
 /*declarar variable de color, lo vamos a usar en la fuente
 y en el borde, también variable de 48px para el círculo*/
-/*:root {
-    --size-icon: 48px;
-    --color-firered*/
+:root {
+  --size-icon: 48px;
+  --color-firered: #cc212a;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 .header {
-  color: #cc212a;
+  color: var(--color-firered);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -19,7 +20,11 @@ body {
   font-weight: 800px;
 }
 .footer {
-  border: solid 1px green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-firered);
   border-top: solid 3px var(--color-firered);
   position: fixed;
   bottom: 0;
@@ -27,17 +32,33 @@ body {
   right: 0;
 }
 .icon {
-  /*display: flex;
-    justify-content: center;
-    align-items: center;*/
-  width: 48px;
-  height: 48px;
+  line-height: var(--size-icon);
   /*solución para alinear texto, cuando sólo tenemos texto,
-  indica el ato de cada línea*/
-  line-height: calc (48/2) px;
+  indica el ato de cada línea
+  line-height: ;*/
+  width: var(--size-icon);
+  height: var(--size-icon);
+
   /*border radius redondea esquinas, le temenos que decir que redondee la mitad de lo que mide para que el resultado sea un círculo*/
-  border-radius: calc();
+  border-radius: 50%;
   background-color: var(--color-firered);
   color: white;
   font-weight: bold;
+  transform: translate(0, -24px);
+}
+.footer-copy {
+  color: black;
+}
+
+/*responsive*/
+@media all and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px;
+  }
+  .icon {
+    transform: unset;
+    order: 1;
+  }
 }
