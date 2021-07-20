@@ -1,0 +1,43 @@
+/*declarar variable de color, lo vamos a usar en la fuente
+y en el borde, también variable de 48px para el círculo*/
+/*:root {
+    --size-icon: 48px;
+    --color-firered*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.header {
+  color: #cc212a;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800px;
+}
+.footer {
+  border: solid 1px green;
+  border-top: solid 3px var(--color-firered);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.icon {
+  /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+  width: 48px;
+  height: 48px;
+  /*solución para alinear texto, cuando sólo tenemos texto,
+  indica el ato de cada línea*/
+  line-height: calc (48/2) px;
+  /*border radius redondea esquinas, le temenos que decir que redondee la mitad de lo que mide para que el resultado sea un círculo*/
+  border-radius: calc();
+  background-color: var(--color-firered);
+  color: white;
+  font-weight: bold;
+}
