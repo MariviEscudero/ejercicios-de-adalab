@@ -1,0 +1,28 @@
+.cajas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+}
+
+.header {
+  height: 20vh;
+  background-color: mediumorchid;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+.menu {
+  background-color: darkslateblue;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+.content {
+  background-color: darksalmon;
+  grid-column-start: 6;
+  grid-column-end: 13;
+}
+.footer {
+  height: 20vh;
+  background-color: lightskyblue;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
