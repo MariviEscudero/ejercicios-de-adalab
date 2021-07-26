@@ -1,0 +1,23 @@
+.prueba-premium {
+  background-color: dodgerblue;
+  padding: 5%;
+  padding-top: 200px;
+  padding-left: 5%;
+  line-height: 1.2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.ver-planes {
+  background-color: rgb(40, 214, 34);
+  box-sizing: border-box;
+  width: 20rem;
+  color: white;
+  border-radius: 15px;
+
+  text-align: center;
+}
+.condiciones {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

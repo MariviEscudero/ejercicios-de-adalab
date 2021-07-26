@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adalab Web Starter Kit</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+
+  <body>
+    <form action="" method="post">
+      <fieldset>
+        <label for="nombre">Nombre </label>
+        <input
+          id="firstName"
+          type="text"
+          name="firstName"
+          placeholder="Nombre"
+        />
+        <input
+          id="lastName"
+          type="text"
+          name="lastName"
+          placeholder="Apellidos"
+        />
+      </fieldset>
+
+      <fieldset>
+        <label for="usuario">Nombre de usuario </label>
+        <input id="usuario" type="email" name="user" placeholder="@gmail.com" />
+
+        <label for="contraseña">Contraseña </label>
+        <input id="contraseña" type="password" name="contraseña" />
+        <label for="contraseña">Confirma tu contraseña </label>
+        <input id="contraseña" type="password" name="contraseña" />
+      </fieldset>
+
+      <fieldset>
+        <label for="birthday">Fecha de naciemiento </label>
+
+        <input
+          id="birthday"
+          type="number"
+          min="1"
+          max="31"
+          name="dia"
+          placeholder="Día"
+        />
+        <select id="size" name="size">
+         
+          <option value="	enero">enero	</option> 
+          <option value="	febrero">	febrero	</option> 
+          <option value="	marzo">marzo	</option> 
+          <option value="	abril">abril	</option> 
+          <option value="	mayo">mayo	</option> 
+          <option value="	junio">junio	</option> 
+          <option value="	julio">julio	</option> 
+          <option value="	agosto">	agosto</option> 
+          <option value="	septiembre	">septiembre</option> 
+          <option value="	octubre	">	octubre	</option> 
+          <option value="	noviembre	">	noviembre	</option> 
+          <option value="	diciembre	">	diciembre	</option> 
+          
+
+        <input id="birthday" type="password" name="año" />
+      </fieldset>
+
+      fecha de nacimiento (dia/mes/año) sexo telefono direccion de correo
+      electronico actual ubicacion
+      <input type="submit" value="Enviar info" />
+    </form>
+  </body>
+</html>
