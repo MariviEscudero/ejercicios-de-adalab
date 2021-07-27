@@ -1,0 +1,19 @@
+.row {
+  text-align: center;
+}
+.header {
+  background-color: lightpink;
+}
+.menu {
+  background-color: purple;
+  height: 12rem;
+}
+.content {
+  background-color: salmon;
+}
+.footer {
+  background-color: lightskyblue;
+}
+.col-12 {
+  height: 3rem;
+}
