@@ -1,0 +1,10 @@
+.button {
+  display: block;
+  padding: 10px;
+  margin: 20px;
+  background-color: red;
+  color: white;
+}
+.opacity {
+  background-color: rgba(172, 36, 36, 0.253);
+}

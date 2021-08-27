@@ -1,0 +1,42 @@
+.body{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    background-color: rgb(127, 255, 212);
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.head__list{
+   
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+   
+    
+}
+.head__list--item{
+    list-style-type:none;
+    font-size: 14px;
+}
+.article_link{
+    text-decoration: none;
+    color: black;
+}
+.main{
+    background-color: darksalmon;
+    padding-top: 50px;
+}
+.article{
+    background-color: darkseagreen;
+}
+.js_main{
+    padding-top: 50px;
+}
