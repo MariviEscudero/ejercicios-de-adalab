@@ -64,30 +64,41 @@ function handleClickDataTableView(event){
 }
 dataTableView.addEventListener('click', handleClickDataTableView);
 
+//escribir bookmarks:
+
+//variables para cada bookmark, son objetos
+
+const bmkData_1 = {
+   url: 'https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion',
+   desc: 'JS en los materiales de Adalab',
+   seen: true,
+   tags_1: 'javascript',
+   tags_2: '',
+};
+
+const bmkData_2 = {
+   url:  "https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/",
+   desc: 'Ideas de proyectos JS',
+   seen: true,
+   tags_1: 'javascript',
+   tags_2: 'portfolio',
+};
 
 
-//variables para cada bookmark
-const bmk_1_url   = 'https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion';
-const bmk_1_desc   = 'JS en los materiales de Adalab';
-const bmk_1_seen   = 'checked';
-const bmk_1_tags_1 = 'javascript';
-const bmk_1_tags_2 = '';
 
-const bmk_2_url    = "https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/";
-const bmk_2_desc   = 'Ideas de proyectos JS';
-const bmk_2_seen   = 'checked';
-const bmk_2_tags_1 = 'javascript';
-const bmk_2_tags_2 = 'portfolio';
+const bmkData_3 = {};
+   bmkData_3.url    = "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web";
+   bmkData_3.desc   = 'HTML en los materiales de Adalab';
+   bmkData_3.seen   = false;
+   bmkData_3.tags_1 = 'HTML';
+   bmkData_3.tags_2 = 'CSS';
 
-const bmk_3_url    = "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web";
-const bmk_3_desc   = 'HTML en los materiales de Adalab';
-const bmk_3_seen   = 'checked';
-const bmk_3_tags_1 = 'HTML';
-const bmk_3_tags_2 = 'CSS'; 
 
 //funcion render bookmarks
 
 //funcion para tags, para que no pinte los li cuando no estan rellenos por ninguna etiqueta, la vamos a invocar en la funcion que pinta el bookmark
+
+
 
 function renderTags(tags_1, tags_2){
 
@@ -109,21 +120,32 @@ function renderTags(tags_1, tags_2){
 
 }
 
+function renderSeen(seen){
+   if(seen){
+      return  'checked title="Enlace leído"';
+   }
+   else{
+      return  'title="Por leer"';
+   }
+}
+
 //funcion render bookmarks, pinta los bookmarks, los parametros son generales y en la variable let siguente metemos los parametros de cada bookmark
 
-function renderBookmark(url, desc, seen, tags_1, tags_2){
-   const htmlTags = renderTags(tags_1, tags_2);
+
+function renderBookmark(bmkData){
+   const htmlTags = renderTags(bmkData.tags_1, bmkData.tags_2);
+   const htmlSeen = renderSeen(bmkData.seen);
    const htmlBookmark = `<li class="data__listitem">
    <article class="data__item">
    <p class="item__url">
-      <a href= ${url} target="_blank" rel="noopener noreferrer">
-      ${url}
+      <a href= ${bmkData.url} target="_blank" rel="noopener noreferrer">
+      ${bmkData.url}
       </a>
    </p>
    <p class="item__seen">
-      <input type="checkbox" ${seen} name="item_imp_2" id="item_imp_2">
+      <input type="checkbox" ${htmlSeen} name="item_imp_2" id="item_imp_2">
    </p>
-   <p class="item__desc">${desc}</p>
+   <p class="item__desc">${bmkData.desc}</p>
 
    ${htmlTags}
    </article>
@@ -135,9 +157,9 @@ return htmlBookmark;
 
 // variable en la que metemos el resultado de la funcion anterior
 
-let html = renderBookmark(bmk_1_url,bmk_1_desc ,bmk_1_seen,bmk_1_tags_1, bmk_1_tags_2);
-html += renderBookmark(bmk_2_url,bmk_2_desc ,bmk_2_seen,bmk_2_tags_1, bmk_2_tags_2);
-html +=renderBookmark(bmk_3_url,bmk_3_desc ,bmk_3_seen,bmk_3_tags_1, bmk_3_tags_2);
+let html = renderBookmark(bmkData_1);
+html += renderBookmark(bmkData_2);
+html +=renderBookmark(bmkData_3);
 
 //innerhtml para pintar en el html la funcion de bookmarks
 
