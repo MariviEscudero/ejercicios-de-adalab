@@ -1,18 +1,16 @@
-"use strict";
+'use strict';
 
 //elementos de HTML
-const bodyColor = document.querySelector('.body');
+const bodyColor = document.querySelector('.container');
 const faceWrite = document.querySelector('.smilyface');
 const button = document.querySelector('.update');
 const face = document.querySelector('.face');
-const faceSmile = document.querySelector('.smile');
-const faceAngry = document.querySelector('.angry');
 
 //funcion para cambio de cara
 function faceChange() {
-  if(face.value === ':)'){
+  if (face.value === ':)') {
     faceWrite.innerHTML = face.value;
-  }else if(face.value === ':('){
+  } else if (face.value === ':(') {
     faceWrite.innerHTML = face.value;
   }
 }
@@ -26,19 +24,26 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-//cambio de bgc con numero random par o impar
 
-function bcgColor(){
-  if(parseInt(getRandomNumber())%2 !==0){
+//cambio de bgc con numero random par o impar, no poner parseInt porque el resultado de getRandomNumber ya es un numero, no es un string
+
+function bcgColor() {
+  
+  if (getRandomNumber() % 2 !== 0) {
     bodyColor.classList.add('bodyorange');
-    bodyColor.classList.remove('bodyyellow')
-  }else 
-   bodyColor.classList.remove('bodyorange');
-   bodyColor.classList.add('bodyyellow')
+    bodyColor.classList.remove('bodyyellow');
+  } else bodyColor.classList.remove('bodyorange');
+  bodyColor.classList.add('bodyyellow');
 }
 
 // listener sobre el elemento, con tipo de evento y handler
-button.addEventListener('click', faceChange);
-button.addEventListener('click', bcgColor);
+//una funcion que engloba a las anteriores para poner un solo listener, si no, que esta comentado mas abajo, habria que poner 2 listeners para el mismo elemento, uno para cada funcion por separado
 
+function handleUpdateBtn(){
+  bcgColor();
+  faceChange();
+}
 
+button.addEventListener('click', handleUpdateBtn);
+//button.addEventListener('click', faceChange);
+//button.addEventListener('click', bcgColor);

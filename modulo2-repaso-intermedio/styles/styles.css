@@ -1,6 +1,10 @@
-.body {
-  margin: 0%;
-  padding: 0%;
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+ 
   height: 100vh;
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
