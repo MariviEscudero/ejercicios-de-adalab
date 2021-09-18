@@ -6,8 +6,17 @@ Estamos trabajando en un proyecto bastante grande, donde hay que recoger muchos 
 Esta función debe recibir por parámetro un selector de css y retornará el elemento de HTML correspondiente. Hemos quedado en que cuando llamemos a la función la sintaxis será tal que así:
 const btnEl = getEl(".btn");*/
 
-function getEl(a) {
+//mi solucion:
+/*function getEl(a) {
   return document.querySelector(a);
 }
 const btnEl = getEl(".btn");
-console.log(btnEl);
+console.log(btnEl);*/
+
+//solucion en clase:
+function getEl(selector){
+  const elemento = document.querySelector(selector);
+  return elemento;
+}
+const parrafo = getEl('.btn');
+console.log(parrafo);

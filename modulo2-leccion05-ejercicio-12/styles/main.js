@@ -6,7 +6,7 @@ Nota: esta técnica de poner un listener en la madre y acceder a la hija sobre l
 
 'use.strict';
 
-const teacherIsra = document.querySelector('.teacher--isra');
+/*const teacherIsra = document.querySelector('.teacher--isra');
 const teacherTuerto = document.querySelector('.teacher--tuerto');
 const teacherNasi = document.querySelector('.teacher--nasi');
 
@@ -27,4 +27,24 @@ function selectTeacher(event){
 
 teacherIsra.addEventListener('click', selectTeacher);
 teacherTuerto.addEventListener('click', selectTeacher);
-teacherNasi.addEventListener('click', selectTeacher);
+teacherNasi.addEventListener('click', selectTeacher);*/
+
+//ejercicio en clase
+
+const list = document.querySelector('.teachers');
+function paintSelected(ev){
+    console.log(ev.currentTarget);
+    console.log(ev.target);
+
+    const child = ev.target;
+    const elemento = child.parentNode;
+
+    const text = elemento.querySelector('.favorite');
+    elemento.classList.toggle('teacher--sleected');
+    if(text.innerHTML === 'Añadir'){
+        text.innerHTML ='Quitar';
+    }else{
+        text.innerHTML = 'Añadir';  
+    }
+}
+list.addEventListener('click',paintSelected);

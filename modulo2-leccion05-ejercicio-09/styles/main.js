@@ -8,7 +8,7 @@ Si tuviéramos una constante llamada, por ejemplo, sectionAboutElement en la que
 
 'use.strict';
 
-const teacherIsra = document.querySelector('.teacher--isra');
+/*const teacherIsra = document.querySelector('.teacher--isra');
 const teacherTuerto = document.querySelector('.teacher--tuerto');
 const teacherNasi = document.querySelector('.teacher--nasi');
 
@@ -29,4 +29,23 @@ function selectTeacher(event){
 
 teacherIsra.addEventListener('click', selectTeacher);
 teacherTuerto.addEventListener('click', selectTeacher);
-teacherNasi.addEventListener('click', selectTeacher);
+teacherNasi.addEventListener('click', selectTeacher);*/
+
+const list = document.querySelector('.teacher');
+
+function paintSelected(ev){
+    console.log(ev.currentTarget);
+    console.log(ev.target);
+
+    const elemento = ev.currentTarget;
+    elemento.classList.toggle('teacher--selected');
+    if(text.innerHTML ==='Añadir'){
+        text.innerHTML = 'Quitar';
+    }else{
+        text.innerHTML ='Añadir';
+    }  
+}
+
+for (item of list){
+    item.addEventListener('click', paintSelected);
+}

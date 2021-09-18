@@ -1,0 +1,9 @@
+.align{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.js-dog{
+    margin-top: 50px;
+}
